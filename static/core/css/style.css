@@ -1,0 +1,49 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 29, 2015, 3:48:12 PM
+    Author     : Plux
+*/
+.microbusiness{
+    padding: 10px 50px;
+}
+.microbusiness hr{
+    border: 1px solid #000;
+}
+.microbusiness .border-bottom-dotted{
+    border-bottom: 1px dashed #000;
+}
+.microbusiness p{
+    font-size: 15px;
+    text-indent: 20px;
+    text-align: justify;
+}
+.microbusiness p.comment{
+    font-size: 12px;
+    font-style: italic;
+}
+
+.certification{
+    font-family: 'Tinos', serif;
+}
+.certification p{ 
+    font-size: 9pt;
+    line-height: normal;
+    margin-bottom: 5px;
+}
+.certification .area-tin{
+    border: 1px solid #000;
+}
+.certification .area-tin p{
+    font-size: 20px; 
+    margin-bottom: 0;
+}
+.certification h3{
+    margin-bottom: 8px;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
