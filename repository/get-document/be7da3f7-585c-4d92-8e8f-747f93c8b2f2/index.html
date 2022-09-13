@@ -143,7 +143,7 @@
                                     </a>
                                 </div>
                                 <div class="col-md-6 text-right">
-                                    <a class="btn btn-custom" type="button" href="/repository/repository/13-09-2022_10-50-01.pdf">
+                                    <a class="btn btn-custom" type="button" href="/repository/pdf-test.pdf">
                                         <i class="fa fa-download"></i> Юклаб олиш
                                     </a>
                                 </div>
@@ -209,6 +209,30 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script> 
     <script type="text/javascript" src="/static/core/css/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/core/css/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        let code = 5259;
+        let elem = document.getElementById('form');
+
+        function loadCaptcha() {
+            fetch('/refresh/captcha/').then((result) => {
+                return result.json()
+            }).then((res) => {
+                document.getElementById('captcha_img').src = `static/captchas/${res.response}.jfif`;
+                code = res.response
+            })
+        }
+
+        function checkSubmit() {
+            let captcha_code = document.getElementById('captcha_code').value;
+            console.log(code, captcha_code);
+            if (code.toString() === captcha_code.toString()) {
+                form.submit();
+            } else {
+                loadCaptcha();
+            }
+        }
+    </script>
 </div>
 </body>
 </html>
